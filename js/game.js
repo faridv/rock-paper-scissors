@@ -11,6 +11,7 @@ export default class Game {
   /*
    * In case another move might be added in future! For example: fire!
    * You will get the joke if you've seen Friends :)
+   * https://tenor.com/view/friends-joey-tribbiani-i-win-pay-up-ross-geller-gif-15694234
    */
   validHands = ['rock', 'paper', 'scissors'];
 
