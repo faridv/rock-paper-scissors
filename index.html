@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rock Paper Scissors</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<main id="wrapper">
+  <!-- Score Board -->
+  <header>
+    <div id="scoreboard">
+      <div class="message">Better Start The Game</div>
+      <div class="scores">
+        <div class="player_1">
+          <div class="name">Player 1</div>
+          <div class="score">0</div>
+        </div>
+        <div class="player_2">
+          <div class="name">Player 2</div>
+          <div class="score">0</div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Game -->
+  <section id="game">
+    <div class="choices left-side">
+      <button class="choice" data-type="play" data-hand="rock" data-player="1" title="Rock">✊</button>
+      <button class="choice" data-type="play" data-hand="paper" data-player="1" title="Paper">✋</button>
+      <button class="choice" data-type="play" data-hand="scissors" data-player="1" title="Scissors">✌️</button>
+      <div class="selected"></div>
+    </div>
+    <div class="vs">
+      <span>VS</span>
+    </div>
+    <div class="choices right-side">
+      <button class="choice" data-type="play" data-hand="rock" data-player="2" title="Rock">✊</button>
+      <button class="choice" data-type="play" data-hand="paper" data-player="2" title="Paper">✋</button>
+      <button class="choice" data-type="play" data-hand="scissors" data-player="2" title="Scissors">✌️</button>
+      <div class="selected"></div>
+    </div>
+  </section>
+  <div id="actions">
+    <button data-type="reset">🔄️ Reset</button>
+    <button data-type="save">💾 Save</button>
+  </div>
+  <!-- Starting Modal -->
+  <div id="start-modal">
+    <div class="inner">
+      <div class="players">
+        <div class="player">
+          <label for="player_1">Player 1</label>
+          <input type="text" id="player_1" name="player_1" value="" placeholder="Write Name...">
+        </div>
+        <div class="player">
+          <label for="player_2">Player 2</label>
+          <input type="text" id="player_2" name="player_2" value="" placeholder="Write Name...">
+        </div>
+      </div>
+      <div class="buttons">
+        <button type="button" data-type="start_multi">🤼‍♂️ Start Multi</button>
+        <button type="button" data-type="start_single">🎮 Start Single</button>
+        <button type="button" data-type="load">💾 Load Saved</button>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="./js/app.js" type="module"></script>
+</body>
+</html>
+

@@ -1,0 +1,246 @@
+/* Variables */
+:root {
+    --background-color: #000;
+    --color: #fff;
+    --primary-color: #0c1973;
+    --accent-color: #efc947;
+    --font-family: 'Jersey 20', Monospaced, sans-serif;
+    --font-size: 32px;
+    --line-height: 1.5;
+    --border-radius: 10px;
+    --form-font-size: 24px;
+
+    /* Scoreboard */
+    --scoreboard-width: 500px;
+    --scoreboard-height: 300px;
+    --scoreboard-background-color: linear-gradient(to bottom, #222, #333);
+    --scoreboard-border-color: #aaa;
+    --scoreboard-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Basic Styles */
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--color);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    border-radius: var(--border-radius);
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: var(--form-font-size);
+    text-transform: uppercase;
+    font-family: var(--font-family);
+    background-color: var(--primary-color);
+    color: var(--color);
+    border: 2px solid #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+input {
+    padding: 10px;
+    border-radius: var(--border-radius);
+    font-size: var(--form-font-size);
+    font-family: var(--font-family);
+    text-align: center;
+}
+
+button:hover, button:focus {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+/* App Wrapper */
+#wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Scoreboard */
+#scoreboard {
+    width: var(--scoreboard-width);
+    height: var(--scoreboard-height);
+    background-color: var(--scoreboard-background-color);
+    border: 3px solid var(--scoreboard-border-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#scoreboard .message {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#scoreboard .scores {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+
+/* Start Modal */
+#start-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 11;
+}
+
+#start-modal .inner {
+    z-index: 13;
+    background-color: #222;
+    width: 720px;
+    height: 480px;
+    border-radius: var(--border-radius);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    border: 7px double var(--accent-color);
+}
+
+#start-modal .players {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#start-modal .players .player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#start-modal .players .player input {
+    margin-top: 30px;
+}
+
+#start-modal .buttons {
+    justify-self: flex-end;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+#start-modal .buttons button {
+    margin: 0 10px;
+}
+
+/* Game */
+#game {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    padding: 20px;
+    position: relative;
+    min-height: 300px;
+}
+
+#game .choices {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    align-items: center;
+    font-size: 56px;
+    position: relative;
+}
+
+#game .choices .selected {
+    position: absolute;
+    transition: all 0.2s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 128px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#game .choices .choice {
+    border: 0 none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 56px;
+    padding: 20px;
+    transition: color 0.3s ease;
+}
+
+#game .choices .choice:hover {
+    background-color: var(--primary-color);
+}
+
+#game .vs {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 0 0 3px #000;
+}
+
+#game .vs:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+}
+
+#game .vs span {
+    background: var(--background-color);
+    position: relative;
+}
+
+/* Game Actions */
+#actions {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#actions button {
+    margin: 0 10px;
+}
