@@ -7,7 +7,10 @@ It also doesn't need any external libraries. You can serve the project folder on
 
 This project is designed for simplicity and ease of use. It requires no installation, dependencies, or tests, making it a hassle-free experience.
 
-I used CSS because a preprocessor requires an external library to build an output file. The CSS file is small and can be easily converted to SCSS or similar.
+I used CSS because a preprocessor requires an external library to build an output file. The CSS file is small and easily converted to SCSS or similar.
+
+## Installation
+Clone the repo or download it, and in the project folder, run `npx http-server`. This will start a web server, and you can see the results by visiting the given URL in your browser.
 
 ## Rules
 * Paper wins the rock but loses to scissors.
