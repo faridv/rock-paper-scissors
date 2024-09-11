@@ -1,6 +1,6 @@
 # Rock-Paper-Scissors game
 
-This project has been meticulously crafted to meet the specifications outlined in the assignment while staying true to its title and purpose.
+This project has been meticulously crafted while staying true to its title and purpose.
 
 I have used ES modules to simplify the project and make it more readable.
 It also doesn't need any external libraries. You can serve the project folder on a web server and play the game in a modern browser.
@@ -25,14 +25,3 @@ Clone the repo or download it, and in the project folder, run `npx http-server`.
 * Each time you save the game, it overwrites the previous one.
 * You can reset the game and start a new one.
 
-### Future Improvements
-
-If I had more time, there would be many things to add to the project.
-For example, saved game data can easily be manipulated by users.
-The best approach is to store the game data in a database and use a Rest API.
-
-Given the short time required to complete this project, I could only implement the browser version of the game.
-
-I didn't use any frameworks, libraries, etc., because the instructions didn't mention any.
-
-Please feel free to contact me if you have any questions.
